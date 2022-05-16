@@ -1,0 +1,17 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.2.0
+    hooks:
+    -   id: check-yaml
+#    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+-   repo: https://github.com/psf/black
+    rev: 22.3.0
+    hooks:
+    -   id: black
+        entry: bash -c 'black . && git add -u' --
+-   repo: https://github.com/surroundaustralia/clean_ttl_hook
+    rev: 03b4d9669bb7a5bdd296ebda804c5f18d6bd9b2c
+    hooks:
+      - id: clean_ttl
+        files: '.+\.ttl$'
